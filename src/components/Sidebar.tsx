@@ -16,7 +16,7 @@ const Sidebar = () => {
   const menuItems = [
     { name: "Home", icon: <FiHome />, id: "home" },
     { name: "Plans", icon: <FaRupeeSign />, id: "plans" },
-    { name: "Gallery", icon: <FiImage />, id: "gallery" },
+    { name: "Inside View", icon: <FiImage />, id: "gallery" },
     { name: "Trainers", icon: <FiUsers />, id: "trainers" },
     { name: "Contact", icon: <FiPhone />, id: "contact" },
   ];
@@ -28,9 +28,9 @@ const Sidebar = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-black text-white flex justify-between items-center px-4 py-3 fixed top-0 w-full z-30">
+      <div className="bg-black text-white flex justify-between items-center px-4 py-3 fixed top-0 w-full z-30 cursor-pointer">
         <button onClick={() => setIsOpen(true)}>
-          <FiMenu size={26} />
+          <FiMenu className="cursor-pointer" size={26} />
         </button>
 
         <img

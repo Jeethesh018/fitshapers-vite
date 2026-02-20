@@ -1,5 +1,10 @@
 import Sidebar from "../components/Sidebar"
 import Hero from "../components/Hero"
+import Plans from "../components/Plans"
+import Gallery from "../components/Gallery"
+import Trainers from "../components/Trainers"
+import Contact from "../components/Contact"
+import Footer from "../components/Footer"
 
 const Home = () => {
   return (
@@ -10,21 +15,28 @@ const Home = () => {
       <div className="pt-16">
 
         <Hero />
+       
+      
+       
 
         <section id="plans" className="min-h-screen p-6">
-          Plans Section
+        <Plans/>
         </section>
 
         <section id="gallery" className="min-h-screen p-6">
-          Gallery Section
+            <Gallery/>
         </section>
 
         <section id="trainers" className="min-h-screen p-6">
-          Trainers Section
+         <Trainers/>
         </section>
 
         <section id="contact" className="min-h-screen p-6">
-          Contact Section
+          <Contact/>
+        </section>
+
+        <section className="p-2">
+          <Footer/>
         </section>
 
       </div>
