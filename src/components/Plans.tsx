@@ -27,7 +27,7 @@ const Plans = () => {
 
     const updatePlansPerView = () => {
       if (window.innerWidth >= 768)
-        setPlansPerView(3)
+        setPlansPerView(3) 
       else
         setPlansPerView(1)
     }
