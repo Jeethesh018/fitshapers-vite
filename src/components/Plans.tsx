@@ -22,12 +22,11 @@ const Plans = () => {
   const startX = useRef(0)
   const isDragging = useRef(false)
 
-  // Detect screen size
   useEffect(() => {
 
     const updatePlansPerView = () => {
       if (window.innerWidth >= 768)
-        setPlansPerView(3) 
+        setPlansPerView(3)
       else
         setPlansPerView(1)
     }
@@ -72,20 +71,17 @@ const Plans = () => {
   }
 
   const handleSwipe = (endX: number) => {
-
     const diff = startX.current - endX
-
     if (diff > 50) next()
     else if (diff < -50) prev()
-
   }
 
   return (
-    <section className="bg-zinc-900 text-white py-16 px-6 overflow-hidden">
+    <section className="bg-zinc-900 text-white py-16 px-0 md:px-6 overflow-hidden">
 
       <div className="max-w-6xl mx-auto relative">
 
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 px-4 md:px-0">
           Membership <span className="text-orange-500">Plans</span>
         </h2>
 
@@ -134,7 +130,7 @@ const Plans = () => {
 
               <div
                 key={index}
-                className="min-w-full md:min-w-[33.333%] px-4"
+                className="min-w-full md:min-w-[33.333%] px-0 md:px-4"
               >
 
                 <div className="
@@ -163,8 +159,8 @@ const Plans = () => {
                     <li>✔ Functional Training</li>
                   </ul>
 
-                  <a
-                    href={`https://wa.me/918553036233?text=Hi, I want to join ${plan.name} Plan`}
+                  
+                   <a href={`https://wa.me/918553036233?text=Hi, I want to join ${plan.name} Plan`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
@@ -206,7 +202,7 @@ const Plans = () => {
           <FiChevronRight size={26} />
         </button>
 
-        {/* Correct Pagination */}
+        {/* Pagination */}
         <div className="flex justify-center mt-8 gap-2">
 
           {Array.from({ length: totalPages }).map((_, index) => (

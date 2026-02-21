@@ -43,7 +43,6 @@ const Gallery = () => {
       setCurrentIndex(prev => prev - 1)
   }
 
-  // Mobile swipe only
   const handleTouchStart = (e: React.TouchEvent) => {
     startX.current = e.touches[0].clientX
   }
@@ -56,12 +55,12 @@ const Gallery = () => {
   }
 
   return (
-    <section className="bg-black text-white py-16 px-6 overflow-hidden">
+    <section className="bg-black text-white py-16 px-0 md:px-6 overflow-hidden">
 
       <div className="max-w-6xl mx-auto relative">
 
         {/* Premium Title */}
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 px-4 md:px-0">
           Inside <span className="text-orange-500">FitShapers</span>
         </h2>
 
@@ -107,7 +106,7 @@ const Gallery = () => {
 
               <div
                 key={index}
-                className="min-w-full px-4"
+                className="min-w-full px-0 md:px-4"
               >
 
                 <div className="

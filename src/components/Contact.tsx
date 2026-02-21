@@ -9,7 +9,7 @@ const MAPS_LINK = "https://maps.app.goo.gl/CD5YynV6GH9z5BLe6";
 
 export default function Contact() {
   return (
-   <section className="bg-black py-12 md:py-28 px-4">
+    <section className="bg-black py-12 md:py-28 px-2 md:px-4">
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}
@@ -28,8 +28,8 @@ export default function Contact() {
         <div className="flex flex-col md:flex-row gap-4 md:gap-6 justify-center mb-16 animate-fadeUp animate-delay-1">
 
           {/* WhatsApp */}
-          <a
-            href={WHATSAPP_LINK}
+          
+           <a href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="
@@ -47,8 +47,8 @@ export default function Contact() {
           </a>
 
           {/* Call */}
-          <a
-            href={PHONE_LINK}
+          
+           <a  href={PHONE_LINK}
             className="
               flex items-center justify-center gap-3
               border border-zinc-700
@@ -85,8 +85,8 @@ export default function Contact() {
           </p>
 
           {/* Open in Maps Button */}
-          <a
-            href={MAPS_LINK}
+          
+            <a href={MAPS_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="

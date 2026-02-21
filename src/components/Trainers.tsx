@@ -17,6 +17,18 @@ const Trainers = () => {
       experience: "7+ Years Experience",
       image: Bittu,
     },
+     {
+      name: "Bittu Kumar",
+      role: "Strength Coach & Yoga Trainer",
+      experience: "7+ Years Experience",
+      image: Bittu,
+    },
+     {
+      name: "Bittu Kumar",
+      role: "Strength Coach & Yoga Trainer",
+      experience: "7+ Years Experience",
+      image: Bittu,
+    },
     
   ]
 
@@ -55,19 +67,21 @@ const Trainers = () => {
   }
 
   return (
-    <section className="bg-zinc-900 text-white py-16 px-6 overflow-hidden">
+    <section className="bg-zinc-900 text-white py-16 px-0 md:px-6 overflow-hidden">
 
       <div className="max-w-6xl mx-auto">
 
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 px-4 md:px-0">
           Meet Our <span className="text-orange-500">Trainers</span>
         </h2>
 
         {/* Mobile Swipe Caption ONLY */}
-      {trainers.length > 1  &&  <p className="text-center text-zinc-400 mb-8 md:hidden">
-          ← Swipe to view trainers →
-        </p>} 
+        {trainers.length > 1 && (
+          <p className="text-center text-zinc-400 mb-8 md:hidden">
+            ← Swipe to view trainers →
+          </p>
+        )}
 
         {/* MOBILE SWIPE VIEW */}
         <div
@@ -87,7 +101,7 @@ const Trainers = () => {
 
               <div
                 key={index}
-                className="min-w-full px-4"
+                className="min-w-full px-0 md:px-4"
               >
                 <TrainerCard trainer={trainer} />
               </div>
