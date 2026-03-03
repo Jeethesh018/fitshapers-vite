@@ -31,7 +31,6 @@ const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const startX = useRef(0)
-  const isDragging = useRef(false)
 
   const next = () => {
     if (currentIndex < images.length - 1)
@@ -90,7 +89,7 @@ const Gallery = () => {
 
         {/* Carousel */}
         <div
-          className="overflow-hidden w-full"
+          className="overflow-hidden w-full rounded-xl"
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
@@ -119,7 +118,7 @@ const Gallery = () => {
                     alt={image.alt}
                     className="
                       w-full
-                      h-[260px] md:h-[420px]
+                      h-[240px] sm:h-[300px] md:h-[420px]
                       object-cover
                     "
                   />
@@ -158,8 +157,10 @@ const Gallery = () => {
 
           {images.map((_, index) => (
 
-            <div
+            <button
               key={index}
+              onClick={() => setCurrentIndex(index)}
+              aria-label={`Go to image ${index + 1}`}
               className={`
                 h-2 rounded-full transition-all duration-300
                 ${

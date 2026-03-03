@@ -112,6 +112,19 @@ const Trainers = () => {
 
         </div>
 
+        {trainers.length > 1 && (
+          <div className="flex justify-center mt-5 gap-2 md:hidden">
+            {trainers.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                aria-label={`Go to trainer ${index + 1}`}
+                className={`h-2 rounded-full transition-all duration-300 ${currentIndex === index ? "w-6 bg-orange-500" : "w-2 bg-zinc-600"}`}
+              />
+            ))}
+          </div>
+        )}
+
         {/* DESKTOP GRID VIEW */}
         <div className="hidden md:flex flex-col gap-8 mt-8">
 
@@ -165,7 +178,7 @@ const TrainerCard = ({ trainer }: TrainerCardProps) => {
       <img
         src={trainer.image}
         alt={trainer.name}
-        className="w-full h-[320px] object-cover"
+        className="w-full h-[280px] sm:h-[320px] object-cover"
       />
 
       <div className="p-6">
