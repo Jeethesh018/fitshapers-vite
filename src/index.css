@@ -1,13 +1,18 @@
 @import "tailwindcss";
 
-
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  background: #000;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 
 /* Hero entrance animations */
-
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -38,4 +43,15 @@ html {
 
 .animate-delay-4 {
   animation-delay: 0.8s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-up {
+    animation: none;
+    opacity: 1;
+  }
 }

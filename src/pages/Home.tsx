@@ -9,38 +9,31 @@ import Footer from "../components/Footer"
 const Home = () => {
   return (
     <div className="bg-black text-white">
-
       <Sidebar />
 
-      <div className="pt-16">
-
+      <div className="pt-14 sm:pt-16">
         <Hero />
-       
-      
-       
 
-        <section id="plans" className="min-h-screen p-6">
-        <Plans/>
+        <section id="plans" className="min-h-screen px-3 py-6 sm:p-6">
+          <Plans />
         </section>
 
-        <section id="gallery" className="min-h-screen p-6">
-            <Gallery/>
+        <section id="gallery" className="min-h-screen px-3 py-6 sm:p-6">
+          <Gallery />
         </section>
 
-        <section id="trainers" className="min-h-screen p-6">
-         <Trainers/>
+        <section id="trainers" className="min-h-screen px-3 py-6 sm:p-6">
+          <Trainers />
         </section>
 
-        <section id="contact" className="min-h-screen p-6">
-          <Contact/>
+        <section id="contact" className="min-h-screen px-3 py-6 sm:p-6">
+          <Contact />
         </section>
 
         <section className="p-2">
-          <Footer/>
+          <Footer />
         </section>
-
       </div>
-
     </div>
   )
 }
